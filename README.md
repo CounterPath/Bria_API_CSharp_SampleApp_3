@@ -11,6 +11,7 @@ A C# based sample application for interfacing with the Bria API
   - CallHistoryView.cs (Simple Form used to display Call History data in a List View)
   - CPWebSocket.cs (Rudimentary WebSocket handling using ClientWebSocket from .NET)
 
+[[/images/app.png|App screenshot]]
 
 The Main Form has the following areas:
 
