@@ -118,150 +118,126 @@ This event is fired when a StatusChange event is received. The StatusChangedEven
 
 This event is fired when a response to the query for &quot;phone&quot; status is received. Data elements in the PhoneStatusEventArgs are:
 
-bool IsReady
-
-bool CallsAllowed
-
-AccountStates AccountStatus
-
-short ErrorCode
-
-short MaxLines
-
-tring CallsNotAllowedReason
+- bool IsReady
+- bool CallsAllowed
+- AccountStates AccountStatus
+- short ErrorCode
+- short MaxLines
+- string CallsNotAllowedReason
 
 ### OnCallStatus
 
 This event is fired when a response to the query for &quot;call&quot; status is received. Data elements in the CallStatusEventArgs are:
 
-List\&lt;Call\&gt; CallList
+- List\&lt;Call\&gt; CallList
 
 The Call class contains:
 
-string CallId
-
-HoldStates HoldState
-
-List\&lt;CallParticipant\&gt; ParticipantList ss
+- string CallId
+- HoldStates HoldState
+- List\&lt;CallParticipant\&gt; ParticipantList ss
 
 And the CallParticipant class contains:
 
-string Number
-
-string DisplayName
-
-CallStates CallState
-
-long TimeInitiated
+- string Number
+- string DisplayName
+- CallStates CallState
+- long TimeInitiated
 
 ### OnCallOptionsStatus
 
 This event is fired when a response to the query for &quot;callOptions&quot; status is received. Data elements in the CallOptionsStatusEventArgs are:
 
-bool IsAnonymousEnabled
-bool IsLettersToNumbersEnabled
- bool IsAutoAnswerEnabled
+- bool IsAnonymousEnabled
+- bool IsLettersToNumbersEnabled
+- bool IsAutoAnswerEnabled
 
 ### OnAudioPropertiesStatus
 
 This event is fired when a response to the query for &quot;audioProperties&quot; status is received. Data elements in the AudioPropertiesStatusEventArgs are:
 
-bool IsSpeakerModeEnabled
-
-bool IsSpeakerMuted
-
-bool IsMicrophoneMuted
-
-short SpeakerVolume
-
-short MicrophoneVolume
+- bool IsSpeakerModeEnabled
+- bool IsSpeakerMuted
+- bool IsMicrophoneMuted
+- short SpeakerVolume
+- short MicrophoneVolume
 
 ### OnMissedCallsStatus
 
 This event is fired when a response to the query for &quot;missedCalls&quot; status is received. Data elements in the MissedCallsStatusEventArgs are:
 
-int Count
+- int Count
 
 ### OnVoiceMailStatus
 
 This event is fired when a response to the query for &quot;voiceMail&quot; status is received. Data elements in the VoiceMailsStatusEventArgs are:
 
-List\&lt;VoiceMailInfo\&gt; VoiceMailInfoList
+- List\&lt;VoiceMailInfo\&gt; VoiceMailInfoList
 
 The class VoiceMailInfo contains:
 
-short AccountId
+- short AccountId
+- string AccountName
+- int Count
+- bool HasNewVoiceMail
 
-string AccountName
-
-int Count
-
-bool HasNewVoiceMail
-
-OnCallHistoryStatus
+### OnCallHistoryStatus
 
 This event is fired when a response to the query for &quot;callHistory&quot; status is received. Data elements in the CallHistoryStatusEventArgs are:
 
-List\&lt;CallHistoryItem\&gt; CallHistoryItemList
+- List\&lt;CallHistoryItem\&gt; CallHistoryItemList
 
 The class CallHistoryItem contains:
 
-CallHistoryEntryTypes Type
+- CallHistoryEntryTypes Type
+- string Number
+- string DisplayName
+- int Duration
+- long TimeInitiated
 
-string Number
-
-string DisplayName
-
-int Duration
-
-long TimeInitiated
-
-OnSystemSettingsStatus
+### OnSystemSettingsStatus
 
 This event is fired when a response to the query for &quot;systemSettings&quot; status is received. Data elements in the SystemSettingsStatusEventArgs are:
 
-CallTypes DefaultCallType
+- CallTypes DefaultCallType
+- bool CallRightAwayOnceNumberSelected
 
-bool CallRightAwayOnceNumberSelected
-
-OnErrorReceived
+### OnErrorReceived
 
 This event is fired when an Error is received in response to any query. Date elements in the ErrorReceivedEventArgs are:
 
-int ErrorCode
-
-string ErrorText
-
-string TransactionId
+- int ErrorCode
+- string ErrorText
+- string TransactionId
 
 In addition to the events, the following methods are available in the abstracted API:
 
-void Start()
-void Stop()
-void RequestSetAnonymousMode(bool enabled)
-void RequestSetAutoAnswerMode(bool enabled)
-void RequestSetLettersToNumbersMode(bool enabled)
-void RequestBringPhoneToFront()
-void RequestPlaceCall(string number, CallTypes type)
-void RequestAnswerCall(string callId, bool withVideo)
-void RequestPutCallOnHold(string callId)
-void RequestResumeCall(string callId)
-void RequestEndCall(string callId)
-void RequestCheckVoiceMail(short accountId)
-void RequestSendDTMF(char key)
-void RequestSetSpeakerMode(bool enabled, bool suppressDialTone)
-void RequestSetSpeakerMute(bool enabled)
-void RequestSetMicrophoneMute(bool enabled)
-void RequestSetSpeakerVolume(short volume)
-void RequestSetMicrophoneVolume(short volume)
-void RequestPhoneStatus()
-void RequestCallStatus()
-void RequestCallHistoryStatus(int maxCount, CallHistoryFilterTypes filter)
-void RequestMissedCallStatus()
-void RequestVoiceMailStatus()
-void RequestAudioPropertiesStatus()
-void RequestCallOptionsStatus()
-void RequestSystemSettingsStatus()
-void RequestBringCallHistoryToFront(CallHistoryFilterTypes type, string filterText)
-void RequestSetCallOptions(string anonymous, string autoAnswer, string lettersToNumbers)
-void RequestSetAudioProperties(string mute, string speakerMute, string speaker, bool suppressDialTone, string speakerVolume, string micVolume)
+- void Start()
+- void Stop()
+- void RequestSetAnonymousMode(bool enabled)
+- void RequestSetAutoAnswerMode(bool enabled)
+- void RequestSetLettersToNumbersMode(bool enabled)
+- void RequestBringPhoneToFront()
+- void RequestPlaceCall(string number, CallTypes type)
+- void RequestAnswerCall(string callId, bool withVideo)
+- void RequestPutCallOnHold(string callId)
+- void RequestResumeCall(string callId)
+- void RequestEndCall(string callId)
+- void RequestCheckVoiceMail(short accountId)
+- void RequestSendDTMF(char key)
+- void RequestSetSpeakerMode(bool enabled, bool suppressDialTone)
+- void RequestSetSpeakerMute(bool enabled)
+- void RequestSetMicrophoneMute(bool enabled)
+- void RequestSetSpeakerVolume(short volume)
+- void RequestSetMicrophoneVolume(short volume)
+- void RequestPhoneStatus()
+- void RequestCallStatus()
+- void RequestCallHistoryStatus(int maxCount, CallHistoryFilterTypes filter)
+- void RequestMissedCallStatus()
+- void RequestVoiceMailStatus()
+- void RequestAudioPropertiesStatus()
+- void RequestCallOptionsStatus()
+- void RequestSystemSettingsStatus()
+- void RequestBringCallHistoryToFront(CallHistoryFilterTypes type, string filterText)
+- void RequestSetCallOptions(string anonymous, string autoAnswer, string lettersToNumbers)
+- void RequestSetAudioProperties(string mute, string speakerMute, string speaker, bool suppressDialTone, string speakerVolume, string micVolume)
