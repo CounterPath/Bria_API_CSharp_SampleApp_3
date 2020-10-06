@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bria_API_CSharp_SampleApp_3.0", "Bria_API_SampleApp_Phone\Bria_API_CSharp_SampleApp_3.0.csproj", "{1F68E194-88A8-47F2-B9F9-20E092EFA30A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F68E194-88A8-47F2-B9F9-20E092EFA30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F68E194-88A8-47F2-B9F9-20E092EFA30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F68E194-88A8-47F2-B9F9-20E092EFA30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F68E194-88A8-47F2-B9F9-20E092EFA30A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F6548B1-98F8-41C8-995D-D1CBCA9580D6}
+	EndGlobalSection
+EndGlobal
