@@ -1,9 +1,9 @@
-# Bria_API_CSharp_SampleApp_3
+﻿# Bria_API_CSharp_SampleApp_3
 A C# based sample application for interfacing with the Bria API.
 
 A Windows 10 .NET 4.8 Framework application built with C# and WinForms that uses the Bria API to act as a remote control for CounterPath Bria and Bria Enterprise.
 
-[[https://github.com/Counterpath/Bria_API_CSharp_SampleApp_3/wiki/images/app.png|App screenshot]]
+<img src="https://github.com/Counterpath/Bria_API_CSharp_SampleApp_3/wiki/images/app.png" width="250"/>
 
 ## Steps to run
 
