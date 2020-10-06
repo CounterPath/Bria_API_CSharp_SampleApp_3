@@ -5,7 +5,7 @@ A Windows 10 .NET 4.8 Framework application built with C# and WinForms that uses
 
 <img src="https://github.com/Counterpath/Bria_API_CSharp_SampleApp_3/wiki/images/app.png" width="250"/>
 
-## Steps to run
+## Steps to build and run
 
 1.) Install Visual Studio (this sample was created with Community Edition)
   - install Desktop Application development options
@@ -17,4 +17,4 @@ A Windows 10 .NET 4.8 Framework application built with C# and WinForms that uses
 
 4.) Run the output binary Bria_API_CSharp_SampleApp_3.0.exe
 
-5.) Accept API permissions for Bria API C# SampleApp in Bria or Bria Enterprise
+5.) Accept API permissions for Bria API C# SampleApp in Bria or Bria Enterprise. (Only available in trial or paid subscriptions to Bria Solo or Teams. Bria Solo Free is not supported).
